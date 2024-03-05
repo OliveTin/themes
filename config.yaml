@@ -6,7 +6,7 @@ theme: "jwr"
 menu:
   main:
     - name: 'Themes List'
-      pageRef: '/'
+      pageRef: 'http://olivetin.app/themes/'
       weight: 99
 
     - name: 'Main OliveTin Website'
