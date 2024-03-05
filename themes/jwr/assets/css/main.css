@@ -98,8 +98,6 @@ article header {
 
 article img.featured {
   object-fit: cover;
-  height: 320px;
-  width: 100%;
   box-shadow: none;
   margin: 1em auto 1em auto;
 }
