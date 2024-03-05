@@ -20,7 +20,7 @@
 		<meta name="robots" content="noindex, nofollow">
 		{{ end }}
 
-		{{ $bundleRaw := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
+		{{ $bundleRaw := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
 
 		{{ if .Site.IsServer }}
 		{{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
