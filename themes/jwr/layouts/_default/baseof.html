@@ -22,16 +22,9 @@
 
 		{{ $bundleRaw := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
 
-		{{ if .Site.IsServer }}
-		{{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
-		{{ $bundle := $bundleRaw | toCSS $cssOpts }}
-		<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
-		{{ else }}
 		{{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
-		{{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
-		{{ $bundle := $bundleRaw | toCSS $cssOpts | postCSS $postCSSOpts | minify | fingerprint }}
+		{{ $bundle := $bundleRaw | toCSS $cssOpts | minify | fingerprint }}
 		<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
-		{{ end }}
 
 		<link rel="shortcut icon" href="{{ relURL ($.Site.Params.favicon) }}" type="image/x-icon" />
 
