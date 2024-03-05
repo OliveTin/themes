@@ -1,4 +1,4 @@
-# themes.OliveTin.app
+# OliveTin Themes
 
-You can browse all the themes at https://themes.olivetin.app
+You can browse all the themes at https://olivetin.app/themes/
 
