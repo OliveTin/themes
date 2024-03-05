@@ -8,4 +8,4 @@ To understand how to install a theme; https://docs.olivetin.app/themes.html
 
 ## Contribute a Theme
 
-Fork this repository, create a content/posts/index.md for your theme. PR back.
+Fork this repository, create a content/posts/your-theme/index.md for your theme. PR back.
