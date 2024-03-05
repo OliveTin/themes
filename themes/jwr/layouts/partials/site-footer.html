@@ -1,0 +1,7 @@
+<footer role="contentinfo">
+	<p>&copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}</p>
+
+	<div>{{ partial "social-follow.html" . }}</div>
+
+	<aside>Themes are individually licensed as the author decides. </aside>
+</footer>

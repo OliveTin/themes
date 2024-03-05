@@ -1,0 +1,11 @@
+# Originall this was the "Ananke Gohugo Theme", but I only used it as a rough template - and ripped out just about everything.
+
+name = "jwr"
+license = "AGPLv3"
+tags = ["website", "starter", "responsive", "Disqus", "blog", "Tachyons", "Multilingual", "Stackbit"]
+features = ["posts", "shortcodes", "related content", "comments"]
+min_version = "0.84.0"
+
+[author]
+  name = "jamesread"
+  homepage = "https://jread.com"

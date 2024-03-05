@@ -1,0 +1,48 @@
+{{ define "header" }}
+{{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+{{ $section := .Site.GetPage "section" .Section }}
+<aside class = "currentPage">
+	You are viewing a single theme.
+</aside>
+<article>
+	{{ partial "post-header.html" . }}
+
+	{{ if .Params.featured_image_credit }}
+	<aside class = "featuredImageCredit">
+		Featured image by <a href = "{{ .Params.featured_image_url }}">{{ .Params.featured_image_credit }}</a>
+	</aside>
+	{{ end }}
+
+	<p><strong>Author:</strong> {{ .Params.Author }}</p>
+	<p><strong>GitHub Repository:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
+	<p><a class = "download" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
+
+	<div>
+		{{- .Content -}}
+	</div>
+
+</article>
+
+<aside>
+	<h3>Tags</h3>
+	{{- partial "tags.html" . -}}
+
+	<div>
+		{{ if .Site.DisqusShortname }}
+		{{ template "_internal/disqus.html" . }}
+		{{ end }}
+	</div>
+</aside>
+
+{{- partial "menu-contextual.html" . -}}
+
+{{ if .Params.Medium }}
+<aside>
+	<p>This article is also published on <a href = "{{ .Params.Medium }}">Medium.com</a>.</p>
+</aside>
+{{ end }}
+
+{{ end }}

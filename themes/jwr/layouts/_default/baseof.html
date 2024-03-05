@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default site.Language.Lang  }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+		<meta name="viewport" content="width=device-width,minimum-scale=1">
+		<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
+		{{ hugo.Generator }}
+
+		{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+		{{ $public := not .Params.private }}
+
+		{{ if and $production $public }}
+		<meta name="robots" content="index, follow">
+		{{ else }}
+		<meta name="robots" content="noindex, nofollow">
+		{{ end }}
+
+		{{ $bundleRaw := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
+
+		{{ if .Site.IsServer }}
+		{{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
+		{{ $bundle := $bundleRaw | toCSS $cssOpts }}
+		<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
+		{{ else }}
+		{{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
+		{{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
+		{{ $bundle := $bundleRaw | toCSS $cssOpts | postCSS $postCSSOpts | minify | fingerprint }}
+		<link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
+		{{ end }}
+
+		<link rel="shortcut icon" href="{{ relURL ($.Site.Params.favicon) }}" type="image/x-icon" />
+
+		{{ with .OutputFormats.Get "RSS" }}
+		<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+		<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+		{{ end }}
+
+		{{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
+		{{- template "_internal/opengraph.html" . -}}
+		{{- template "_internal/schema.html" . -}}
+		{{- template "_internal/twitter_cards.html" . -}}
+	</head>
+
+	<body>
+
+		<header>
+			{{ partial "site-navigation.html" .}}
+		</header>
+
+		<main role="main">
+			{{ block "main" . }}{{ end }}
+		</main>
+		{{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+	</body>
+</html>

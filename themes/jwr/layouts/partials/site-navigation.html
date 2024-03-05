@@ -1,0 +1,15 @@
+<nav>
+	<h1><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
+	{{ if .Site.Menus.main }}
+	<ul>
+		{{ range .Site.Menus.main }}
+		<li>
+			<a href = "{{ .PageRef }}">
+				{{ .Name }}
+			</a>
+		</li>
+		{{ end }}
+	</ul>
+	{{ end }}
+	{{ partialCached "social-follow.html" . }}
+</nav>

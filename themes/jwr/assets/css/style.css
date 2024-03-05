@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  background-color: #f1f1f1;
+}
+
+header a {
+  }
+
+header {
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid #bbb;
+  padding: 1em;
+  margin: auto;
+}
+
+nav {
+  max-width: 1000px;
+  margin: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  margin-right: 1em;
+  text-decoration: underline;
+  font-family: sans-serif;
+  color: white;
+}
+
+
+main {
+  margin: auto;
+  max-width: 1000px;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 a {
+  color: white;
+  font-weight: lighter;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}
+
+article {
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+}
+
+article header {
+  padding: 0;
+  background-color: #fff;
+}
+
+article img.featured {
+  object-fit: cover;
+  height: 320px;
+  width: 100%;
+  box-shadow: none;
+  margin: 1em auto 1em auto;
+}
+
+aside {
+  color: #666;
+  font-size: smaller;
+}
+
+article img {
+  box-shadow: 0 0 5px #999;
+  margin: 2em auto 2em auto;
+  display: block;
+  max-width: 100%;
+}
+
+aside.featuredImageCredit {
+  color: #666;
+  text-align: center;
+  display: block;
+  margin-top: -1em;
+}
+
+pre {
+  background-color: #ffffdd;
+  border-radius: 1em;
+  font-size: 1.2em;
+  box-shadow: 0 0 5px #999;
+  padding: .5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tags li {
+  display: inline-block; 
+}
+
+ul.tags li a {
+  font-family: sans;
+  padding: .5em;
+  margin-right: .5em;
+  background-color: #666;
+  color: white;
+  text-decoration: none;
+  border-radius: .5em;
+}
+
+ul.tags li a:hover {
+  background-color: black;
+}
+
+ul.related {
+  list-style: disc;
+}
+
+aside.currentPage {
+  padding: 1em;
+}
+
+a.download {
+  background-color: limegreen;
+  padding: .4em;
+  color: white !important;
+  text-decoration: none;
+  border-radius: 2em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+@media (max-width: 1000px) {
+  article {
+    border-left: 0;
+    border-right: 0;
+  }
+}

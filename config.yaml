@@ -1,0 +1,13 @@
+baseURL: 'https://themes.olivetin.app/'
+languageCode: 'en-us'
+title: 'themes.olivein.app'
+theme: "jwr"
+
+menu:
+  main:
+    - name: 'Themes List'
+      pageRef: '/'
+      weight: 99
+
+    - name: 'Main OliveTin Website'
+      pageRef: 'http://olivetin.app'
