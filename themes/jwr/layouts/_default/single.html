@@ -7,6 +7,18 @@
 <aside class = "currentPage">
 	You are viewing a single theme.
 </aside>
+
+<script>
+function copyToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
+}
+</script>
+
 <article>
 	{{ partial "post-header.html" . }}
 
@@ -18,7 +30,8 @@
 
 	<p>The OliveTin project would really like to thank <strong>{{ .Params.Author }}</strong> for contributing this theme to the themes repository. </p>
 	<p><strong>Theme Name:</strong> {{ .Title }}</p>
-	<p><strong>GitHub Repository:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}.git</a></p>
+	<p><strong>GitHub Repository:</strong> <pre>{{ .Params.GitHubRepo }}.git</pre></p>
+	<button onclick = "copyToClipboard('{{ .Params.GitHubRepo }}.git')">Copy Git URL</button>
 	<p><strong>GitHub Page:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
 	<p><a class = "download" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
 
