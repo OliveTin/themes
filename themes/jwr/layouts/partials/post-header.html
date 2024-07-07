@@ -13,7 +13,7 @@
 
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 {{ if $featured_image }}
-<img src="{{ $featured_image }}" class = "featured" title = "{{ .Params.featured_image_caption | default "Sorry, this image does not have a title." }}" />
+<a href = "{{.RelPermalink}}"><img src="{{ $featured_image }}" class = "featured" title = "{{ .Params.featured_image_caption | default "Sorry, this image does not have a title." }}" /></a>
 {{ end }}
 
 
