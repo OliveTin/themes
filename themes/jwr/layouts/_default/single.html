@@ -16,8 +16,10 @@
 	</aside>
 	{{ end }}
 
-	<p><strong>Author:</strong> {{ .Params.Author }}</p>
-	<p><strong>GitHub Repository:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
+	<p>The OliveTin project would really like to thank <strong>{{ .Params.Author }}</strong> for contributing this theme to the themes repository. </p>
+	<p><strong>Theme Name:</strong> {{ .Title }}</p>
+	<p><strong>GitHub Repository:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}.git</a></p>
+	<p><strong>GitHub Page:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
 	<p><a class = "download" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
 
 <p><a href = "https://docs.olivetin.app/themes.html">Theme installation instructions</a></p>
