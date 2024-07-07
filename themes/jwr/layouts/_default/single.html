@@ -29,11 +29,12 @@ function copyToClipboard(text) {
 	{{ end }}
 
 	<p>The OliveTin project would really like to thank <strong>{{ .Params.Author }}</strong> for contributing this theme to the themes repository. </p>
-	<p><strong>Theme Name:</strong> {{ .Title }}</p>
-	<p><strong>GitHub Repository:</strong> <pre>{{ .Params.GitHubRepo }}.git</pre></p>
-	<button onclick = "copyToClipboard('{{ .Params.GitHubRepo }}.git')">Copy Git URL</button>
-	<p><strong>GitHub Page:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
-	<p><a class = "download" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
+	<p><strong>Theme Name: </strong> {{ .Title }}</p>
+	<p><strong>Theme's Git Repository:</strong> <pre>{{ .Params.GitHubRepo }}.git</pre></p>
+	<button class = "styledButton" onclick = "copyToClipboard('{{ .Params.GitHubRepo }}.git')">Copy Git Repo</button>
+
+	<p><strong>Theme's Page:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
+	<p><a class = "styledButton" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
 
 <p><a href = "https://docs.olivetin.app/themes.html">Theme installation instructions</a></p>
 	<div>
