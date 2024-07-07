@@ -167,12 +167,13 @@ a.download {
   background-color: #2ea44f;
   border: 1px solid rgba(27, 31, 35, .15);
   transition: all .2s;
-  padding: .2em .4em;
+  padding: 6px 16px;
   color: white !important;
   text-decoration: none;
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
   text-transform: uppercase;
+  font-size: 14px;
   font-family: sans-serif;
   font-weight: 600;
 }
