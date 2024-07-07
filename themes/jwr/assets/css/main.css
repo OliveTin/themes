@@ -164,13 +164,19 @@ aside.currentPage {
 }
 
 a.download {
-  background-color: limegreen;
-  padding: .4em;
-  color: white !important;
+  background-color: #cfef00;
+  transition: all .2s;
+  padding: .2em .4em;
+  color: black !important;
   text-decoration: none;
-  border-radius: 2em;
+  border-radius: .5em;
   text-transform: uppercase;
   font-family: sans-serif;
+  font-weight: 700;
+}
+
+a.download:hover {
+  background-color: #c4e201;
 }
 
 @media (max-width: 1000px) {
