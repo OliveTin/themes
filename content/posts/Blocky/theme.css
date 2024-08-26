@@ -1,0 +1,84 @@
+    /*--Page--*/
+    
+:root{
+    color-scheme: light dark;
+}
+body{
+    background-image: url("/custom-webui/themes/Blocky/mcBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: lightgreen;
+}
+header{
+    background-image: url("/custom-webui/themes/Blocky/mcBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    /*--Sidebar & Navigation--*/
+
+#page-title, #page-title a, #page-title a:visited{
+    color: cyan;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration: none;
+}
+#sidebar-toggler-button{
+    background-image: url("/custom-webui/themes/Blocky/table.png");
+    background-size: contain;
+    color: #ffffff00;
+}
+#navigation-links{
+    background-image: url(/custom-webui/themes/Blocky/cobblestone.png);
+    background-repeat: repeat;
+    background-size:contain;
+}
+#navigation-links a{
+    color: cyan;
+    font-weight: 550;
+    text-shadow: 1px 1px 2px #000000, 0 0 1em #fdff9b, 0 0 0.2em #fdff9b;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#showDiagnostics{
+    background-image: url(/custom-webui/themes/Blocky/wood.png);
+    background-size: contain;
+    color: cyan;
+}
+#showLogs{
+    background-image: url(/custom-webui/themes/Blocky/wood.png);
+    background-size: contain;
+    color: cyan;
+}
+
+    /*--Buttons--*/
+    
+button{
+    margin-top: 10px;
+    color: #aeeaae;
+    background-image: url(/custom-webui/themes/Blocky/buttonBlock.png);
+    border-color: black;
+    box-shadow: 0 0 15px 5px black;
+}
+
+action-button button{ 
+    margin-top: 10px;
+    color: #aeeaae;
+    background-image: url(/custom-webui/themes/Blocky/buttonBlock.png);
+    border-color: black;
+    box-shadow: 0 0 15px 5px black;
+} 
+
+    /*--Objects--*/
+
+.display{
+    margin-top: 10px;
+    background-color: rgba(0, 255, 0, 0.25);
+}
+
+    /*--Popups--*/
+    
+#diagnostics{
+    background-color: rgba(169, 169, 169, 0.35);
+}
+#contentLogs{
+    background-color: rgba(169, 169, 169, 0.35);
+}
