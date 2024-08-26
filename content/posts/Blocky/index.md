@@ -1,6 +1,6 @@
 ---
 title: Blocky
-date: 08-26-2024
+date: 2024-08-26
 author: techsmith404
 GitHubUsername: Techsmith404
 GitHubRepo: https://github.com/OliveTin/DeliciousOlives
