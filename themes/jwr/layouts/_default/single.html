@@ -36,13 +36,13 @@ function copyToClipboard(text) {
 	<p><strong>Theme's Git Repository:</strong> <pre>{{ .Params.GitHubRepo }}.git</pre></p>
 	<button class = "styledButton" onclick = "copyToClipboard('{{ .Params.GitHubRepo }}.git')">Copy Git Repo</button>
 
-	<p><a href = "https://docs.olivetin.app/themes.html">Theme installation instructions</a></p>
+	<p><a href = "https://docs.olivetin.app/reference/reference_themes_for_users.html">Theme installation instructions</a></p>
 
 	<h3>Manual Install</h3>
 	<p><strong>Theme's GitHub Page:</strong> <a href = "{{ .Params.GitHubRepo }}">{{ .Params.GitHubRepo }}</a></p>
 	<p><a class = "styledButton" href = "{{ .Params.GitHubRepo }}/archive/refs/heads/main.zip">Download ZIP</a></p>
 
-	<p><a href = "https://docs.olivetin.app/themes.html">Theme installation instructions</a></p>
+	<p><a href = "https://docs.olivetin.app/reference/reference_themes_for_users.html">Theme installation instructions</a></p>
 	<div>
 		{{- .Content -}}
 	</div>
